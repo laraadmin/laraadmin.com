@@ -107,6 +107,7 @@
   }
 
   function htmlVideo() {
+    /*
     videojs("demo_video", {
       controlBar: {
         timeDivider: false,
@@ -126,6 +127,7 @@
       resizeVideoJS();
       window.onresize = resizeVideoJS;
     });
+    */
   }
 
   function scrollToTop() {
