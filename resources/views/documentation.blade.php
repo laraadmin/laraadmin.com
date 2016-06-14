@@ -48,6 +48,9 @@ nano .env</code></pre>
                     <b class="mb-5">Migrate:</b>
                     <pre><code>php artisan migrate</code></pre>
                     
+                    <b class="mb-5">Change file permissions:</b>
+                    <pre><code>sudo chmod -R 777 bootstrap/ storage/</code></pre>
+                    
                     <h3 id="enable-less">Enable Less to CSS <small>(Optional)</small></h3>
                     <p>To generate CSS files from Less</p>
                     <pre>npm install
@@ -60,20 +63,135 @@ forever node_modules/gulp/bin/gulp.js watch</pre><br>
                     </p>
                     
                     <h1 id="make-migration" class="page-header">Make Migration</h1>
+                    
                     <h3 id="generate-migration">Generate migration file</h3>
                     <p>Take example that you want to generate CRUD for <span class="text-danger">Course</span>.</p>
                     <pre><code>php artisan la:migration Course</code></pre>
+                    <p>You can also use syntax like below:</p>
+                    <pre><code>php artisan la:migration create_course_table</code></pre><br>
+                    
                     <h3 id="edit-migration">Edit Migration</h3>
                     <p>Command <code>la:migration</code> generate the migration file which contains one method call <code>Module::generate</code>:</p>
-                    <pre><code>Module::generate("Courses", 'courses', 'name', [
-            
-        ]);</code></pre>
+                    <pre><code>Module::generate("Courses", 'courses', '<span class="text-success">write_view_column_name_here e.g. name</span>', [
+    <span class="text-success">// Write your columns here</span>
+]);</code></pre>
+                    <p>You need to configure your schema within given array from examples given below:</p>
+                    <b class="mb-5">Row format:</b>
+                    <pre><code>["col_name_db", "Label", "UI_Type", "Readonly", "Default_Value", "min_length", "max_length", "Required", "values"]</code></pre>
+                    <table class="table table-bordered">
+                        <tr><th>Field</th><th>Description</th></tr>
+                        <tr><td>col_name_db</td><td>Database column name</td></tr>
+                        <tr><td>Label</td><td>Label of Column e.g. Name / Total Audience</td></tr>
+                        <tr><td>UI_Type</td><td>It defines type of Column in more General way. Please see table for <a href="#ui-types">UI Types</a>.</td></tr>
+                        <tr><td>Readonly</td><td>Whether the data is readonly. Value in <code>TRUE / FALSE</code> or <code>1 / 0</code></td></tr>
+                        <tr><td>Default_Value</td><td>Default value for column.</td></tr>
+                        <tr><td>min_length</td><td>Minimum Length of value in integer.</td></tr>
+                        <tr><td>max_length</td><td>Maximum Length of value in integer.</td></tr>
+                        <tr><td>Required</td><td>Is this mandatory field in Add/Edit forms.</td></tr>
+                        <tr><td>values</td><td>This is for MultiSelect / TagInput and Radio Columns.</td></tr>
+                    </table>
                     
+                    <b class="mb-5">Create Name / Title Column:</b>
+                    <pre><code>["name", 'Name', 'Name', false, '', 5, 256, true],</code></pre>
+                    <p>You also need to define the title / view column name in generate method <code>write_view_column_name_here</code> in lowercase only. </p><br>
                     
+                    <h3 id="schema-ui-types">UI Types</h3>
+                    
+                    <table class="table table-bordered">
+                        
+                        <tr><th>UI Type (3)</th><th>Min Length (6)</th><th>Max Length (6)</th><th>Default Value (5)</th><th>Values (9)</th></tr>
+                        <tr><td class="bold" rowspan="2">Address</td><td class="tac">Integer</td><td class="tac">Integer</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["address", "Address", "Address", false, "", 0, 1000, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Checkbox</td><td class="tac">0</td><td class="tac">0</td><td class="tac">true / false</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["restricted", "Restricted", "Checkbox", false, false, 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Currency</td><td class="tac">Minimum Value</td><td class="tac">Maximum Value</td><td class="tac">In Decimal</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["price", "Price", "Currency", false, 0.0, 0, 0, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Date</td><td class="tac">0</td><td class="tac">0</td><td class="tac">date("Y-m-d")<br>2016-06-23</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["date_release", "Date of Release", "Date", false, date("Y-m-d"), 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Datetime</td><td class="tac">0</td><td class="tac">0</td><td class="tac">date("Y-m-d H:i:s")<br>2016-06-23 14:20:90</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["time_started", "Start Time", "Datetime", false, date("Y-m-d H:i:s"), 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Decimal</td><td class="tac">Minimum Value</td><td class="tac">Maximum Value</td><td class="tac">In Decimal</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["weight", "Weight", "Decimal", false, 0.0, 0, 20, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Dropdown</td><td class="tac">0</td><td class="tac">0</td><td class="tac">In String / Integer</td><td>Array / @table_name</td></tr>
+                        <tr><td colspan=4 class="example"><textarea rows=2 wrap='off' readonly onfocus="this.select();">["publisher", "Publisher", "Dropdown", false, "Marvel", 0, 0, false, ["Bloomsbury","Marvel","Universal"]],
+["publisher", "Publisher", "Dropdown", false, 3, 0, 0, false, "@publishers"],</textarea></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Email</td><td class="tac">Integer</td><td class="tac">Integer</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["email", "Email", "Email", false, "", 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Float</td><td class="tac">Minimum Value</td><td class="tac">Maximum Value</td><td class="tac">In Float</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["weight", "Weight", "Float", false, 0.0, 0, 20.00, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">HTML</td><td class="tac">0</td><td class="tac">0</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["biography", "Biography", "HTML", false, "<p>This is description</p>", 0, 0, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Image</td><td class="tac">0</td><td class="tac">256</td><td class="tac">Image Path (String)</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["profile_image", "Profile Image", "Image", false, "img_path.jpg", 0, 256, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Integer</td><td class="tac">Minimum Value</td><td class="tac">Maximum Value</td><td class="tac">In Integer</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["pages", "Pages", "Integer", false, 0, 0, 5000, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Mobile</td><td class="tac">0</td><td class="tac">20</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["mobile", "Mobile", "Mobile", false, "+91 8888888888", 0, 20, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Multiselect</td><td class="tac">0</td><td class="tac">Max Selections</td><td class="tac">In String / Integer</td><td>Array / @table_name</td></tr>
+                        <tr><td colspan=4 class="example"><textarea rows=2 wrap='off' readonly onfocus="this.select();">["media_type", "Media Type", "Multiselect", false, ["Audiobook"], 0, 0, false, ["Print","Audiobook","E-book"]],
+["media_type", "Media Type", "Multiselect", false, [2,3], 0, 0, false, @media_types],</textarea></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Name</td><td class="tac">5</td><td class="tac">256</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["name", "Name", "Name", false, "John Doe", 5, 256, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Password</td><td class="tac">6</td><td class="tac">256</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["password", "Password", "Password", false, "", 6, 256, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Radio</td><td class="tac">0</td><td class="tac">0</td><td class="tac">Array</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["status", "Status", "Radio", false, "Published", 0, 0, false, ["Draft","Published","Unpublished"]],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">String</td><td class="tac">0 Integer</td><td class="tac">256 Integer</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["author", "Author", "String", false, "JRR Tolkien", 0, 256, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Taginput</td><td class="tac">0</td><td class="tac">0</td><td class="tac">Array</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["genre", "Genre", "Taginput", false, ["Fantacy","Adventure"], 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">Textarea</td><td class="tac">0 Integer</td><td class="tac">1000 Integer</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["description", "Description", "Textarea", false, "", 0, 1000, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">TextField</td><td class="tac">5 Integer</td><td class="tac">256 Integer</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["short_intro", "Short Introduction", "TextField", false, "", 5, 256, true],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">URL</td><td class="tac">0</td><td class="tac">Default 256</td><td class="tac">In String</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["website", "Website", "URL", false, "http://dwij.in", 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                    </table>
+                    
+                    <p>Once you are done with creating Schema your generate call will look like this:</p>
+                    <pre><code>Module::generate("Courses", 'courses', '<span class="text-success">name</span>', [
+    ["name", 'Name', 'Name', false, '', 5, 256, true],
+    ["teacher", 'Teacher', 'String', false, '', 0, 256, true],
+    ["fees", 'Fees', 'Currency', false, 0.0, 0, 2, true],
+    ["description", 'Description', 'Textarea', false, '', 0, 1000, false]
+]);</code></pre>
+                    <p>Now run migrate command to create database table.</p>
+                    <pre><code>php artisan migrate</code></pre>
+                    <p>Once the table is successfully generated, you can genrate CRUD.</p>
                     <h1 id="crud-generation" class="page-header">Generate CRUD</h1>
-					<p>Once Schema in Migration ready and executed. There remains only one command to generate the CRUDs.</p>
-                    
-                    <br><br><br>
+					<p>Once Schema in Migration ready and migrated successfully, it takes only one command to generate CRUDs.</p>
+                    <pre><code>php artisan la:crud courses</code></pre>
+                    <p>Voila... This will generate following things:</p>
+                    <ul>
+                        <li>Controller</li>
+                        <li>Model</li>
+                        <li>Views: Index, Edit, Show</li>
+                        <li>Append Route Resources</li>
+                        <li>Add Menu</li>
+                    </ul>
+                    <p>Enjoy the adventure !!! Any queries will be welcomed on <a href="mailto:ganesh@dwij.in">ganesh@dwij.in</a>. </p>
+                    <br>
 				</div>
 			</div>
 			
