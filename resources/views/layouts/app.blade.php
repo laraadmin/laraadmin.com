@@ -32,10 +32,18 @@
 	<meta name="theme-color" content="#663fb5">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/landio.css') }}">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=505366739518931";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- Navigation
 	================================================== -->
 
