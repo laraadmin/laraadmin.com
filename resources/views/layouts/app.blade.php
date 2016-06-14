@@ -158,6 +158,26 @@
     
     @yield('content')
 
+<section class="section-intro bg-faded" style="padding:30px 0px;">
+	<div class="social-links">
+		<a target="_blank" href="https://github.com/gdbhosale" class="github"><i class="fa fa-github"></i></a>
+		<a target="_blank" href="https://plus.google.com/+GaneshBhosale" class="google"><i class="fa fa-google"></i></a>
+		<a target="_blank" href="https://www.facebook.com/gbhosale" class="facebook"><i class="fa fa-facebook"></i></a>
+		<a target="_blank" href="https://twitter.com/gdbhosale" class="twitter"><i class="fa fa-twitter"></i></a>
+		<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
+		<a target="_blank" href="http://dwij.co.in" class="google"><i class="fa fa-comments"></i></a>
+	</div>
+	
+	<div class="text-center">
+		<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>&nbsp;&nbsp;
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://laraadmin.com" data-text="LaraAdmin - Laravel based open-source CRUD Generator" data-via="DwijITSolutions">Tweet</a>&nbsp;&nbsp;
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/109008605229791628934" data-rel="publisher"></div>&nbsp;&nbsp;
+		<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="50"></div>
+	</div>
+</section>
+
 	<footer class="section-footer bg-inverse" role="contentinfo">
 		<div class="container">
 			<div class="row">
