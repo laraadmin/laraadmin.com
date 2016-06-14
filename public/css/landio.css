@@ -85,7 +85,7 @@ h2,h3{page-break-after:avoid}
 .navbar{display:none}
 .btn>.caret,.dropup>.btn>.caret{border-top-color:#000 !important}
 .label{border:1px solid #000}
-.table{border-collapse:collapse !important}
+.table{border-collapse:collapse !important;border:1px solid #ddd}
 .table td,.table th{background-color:#fff !important}
 .table-bordered th,.table-bordered td{border:1px solid #ddd !important}
 }
@@ -172,6 +172,15 @@ mark,.mark{padding:.2em;background-color:#fcf8e3}
 .figure-caption{font-size:90%;color:#818a91}
 .container{margin-left:auto;margin-right:auto;padding-left:0.938rem;padding-right:0.938rem}
 .container::after{content:"";display:table;clear:both}
+
+.table{border-collapse:collapse !important;border:1px solid #ddd;width:100%;margin:20px 0px;}
+.table th{text-align:center;}
+.table td.tac{text-align:center;}
+.table td.bold{font-weight:bold;text-align:center;}
+.table-bordered th,.table-bordered td{border:1px solid #ddd !important;padding:3px 10px;}
+td.example{padding:0px;}
+td.example input{text-align:center;color:#C7254E;font-family:courier;font-size:13px;width:100%;}
+td.example textarea{text-align:left;color:#C7254E;font-family:courier;font-size:13px;width:100%;}
 @media (min-width:544px){
 	.container{max-width:576px}
 }
