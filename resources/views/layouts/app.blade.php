@@ -39,7 +39,7 @@
 	<!-- Navigation
 	================================================== -->
 
-	<nav class="navbar navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top">
+	<nav class="navbar @yield("nav") ">
 		<div class="container">
 			<a class="navbar-brand" href="{{ url('/') }}">
 				<span class="logo"><i class="fa fa-rocket"></i> LaraAdmin</span>
@@ -51,17 +51,18 @@
 			</a>
 			<div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
 				<ul class="nav navbar-nav pull-xs-right">
-					<li class="nav-item nav-item-toggable">
-						<a class="nav-link" href="#">Documentation</a>
+                    <li class="nav-item nav-item-toggable">
+						<a class="nav-link" href="{{ url('/documentation') }}">Documentation</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
-						<a class="nav-link" href="#">Download</a>
+						<a class="nav-link" href="https://github.com/gdbhosale/laraadmin">Download</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
 						<a class="nav-link" href="https://github.com/gdbhosale/laraadmin" target="_blank">GitHub</a>
 					</li>
+                    <li class="navbar-divider hidden-sm-down" style="margin-right:20px;"></li>
 					<!--
 					<li class="nav-item nav-item-toggable hidden-md-up">
 						<form class="navbar-form">
@@ -106,17 +107,19 @@
 								</div>
 								<div class="media-body media-middle">
 									<h5 class="media-heading">Ganesh Bhosale</h5>
-									<h6>ganesh@dwij.in</h6>
+									<h6><a href="http://dwijitsolutions.com">Dwij IT Solutions</a></h6>
+                                    <h6><a href="mailto:ganesh@dwij.in">ganesh@dwij.in</a></h6>
+                                    <h6><a href="tel:+917350558900">+91 7350558900</a></h6>
 								</div>
 							</div>
 							<div class="social-links">
-								<a href="https://github.com/gdbhosale" class="github"><i class="fa fa-github"></i></a>
-								<a href="http://dwij.co.in" class="google"><i class="fa fa-google"></i></a>
-								<a href="https://github.com/gdbhosale" class="facebook"><i class="fa fa-facebook"></i></a>
-								<a href="https://github.com/gdbhosale" class="twitter"><i class="fa fa-twitter"></i></a>
-								<a href="https://github.com/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
-								<a href="https://github.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
-								<a href="http://dwij.co.in" class="blog"><i class="fa fa-android"></i></a>
+								<a target="_blank" href="https://github.com/gdbhosale" class="github"><i class="fa fa-github"></i></a>
+								<a target="_blank" href="https://plus.google.com/+GaneshBhosale" class="google"><i class="fa fa-google"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/gbhosale" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/gdbhosale" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a target="_blank" href="http://dwij.co.in" class="google"><i class="fa fa-comments"></i></a>
 							</div>
 							<!--<a href="#" class="btn-circle has-gradient pull-xs-right"><span class="sr-only">Edit</span><span class="icon-edit"></span></a>-->
 						</div>
@@ -160,8 +163,8 @@
 				</div>
 				<div class="col-md-6 col-lg-7">
 					<ul class="nav nav-inline" style="padding:0px;">
-						<li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Download</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ url('/documentation') }}">Documentation</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://github.com/gdbhosale/laraadmin">Download</a></li>
 						<li class="nav-item"><a class="nav-link" href="https://github.com/gdbhosale/laraadmin" target="_blank">GitHub</a></li>
 						<li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
 					</ul>

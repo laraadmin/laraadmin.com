@@ -12,8 +12,17 @@
 */
 
 Route::auth();
-
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
-Route::get('/documentation', 'DocumentationController@index');
+
+Route::get('/', function() {
+    return view('home');
+});
+Route::get('/home', function() {
+    return view('home');
+});
+Route::get('/documentation', function() {
+    return view('documentation');
+});
+Route::get('/installation', function() {
+    return view('installation');
+});
