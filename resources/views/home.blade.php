@@ -307,4 +307,10 @@
     </div>
 </section>
 -->
+
+
+<section class="section-signup text-center" style="padding:0px;padding-bottom:40px;">
+    <a href="{{ url('/documentation') }}" class="btn btn-primary">Check out documentation !!!</a>
+</section>
+
 @endsection
