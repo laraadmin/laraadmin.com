@@ -55,7 +55,7 @@ nano .env</code></pre>
                     <p>To generate CSS files from Less</p>
                     <pre>npm install
 npm install forever -g
-forever node_modules/gulp/bin/gulp.js watch</pre><br>
+forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                     
                     <p>Your Application is ready to serve you. Default Super Admin <span class="text-danger">login credentials</span> are as below:<br>
                         <b>Username:</b> laraadmin@gmail.com<br>
