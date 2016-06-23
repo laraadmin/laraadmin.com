@@ -64,11 +64,11 @@
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
-						<a class="nav-link" href="https://github.com/gdbhosale/laraadmin">Download</a>
+						<a class="nav-link" href="https://github.com/gdbhosale/laraadmin-dev">Download</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
-						<a class="nav-link" href="https://github.com/gdbhosale/laraadmin" target="_blank">GitHub</a>
+						<a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a>
 					</li>
                     <li class="navbar-divider hidden-sm-down" style="margin-right:20px;"></li>
 					<!--
@@ -192,8 +192,8 @@
 				<div class="col-md-6 col-lg-7">
 					<ul class="nav nav-inline" style="padding:0px;">
 						<li class="nav-item"><a class="nav-link" href="{{ url('/documentation') }}">Documentation</a></li>
-						<li class="nav-item"><a class="nav-link" href="https://github.com/gdbhosale/laraadmin">Download</a></li>
-						<li class="nav-item"><a class="nav-link" href="https://github.com/gdbhosale/laraadmin" target="_blank">GitHub</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://github.com/gdbhosale/laraadmin-dev">Download</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a></li>
 						<li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
 					</ul>
 				</div>
