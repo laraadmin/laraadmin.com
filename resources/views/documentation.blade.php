@@ -36,7 +36,7 @@ sudo nano /etc/paths</code></pre>
                     <p>Add this path: <code>/Users/me/.composer/vendor/bin</code></p>
                     
 					<h3 id="clone-laraadmin-project">Clone LaraAdmin Project</h3>
-                    <pre><code>git clone https://github.com/gdbhosale/laraadmin.git
+                    <pre><code>git clone https://github.com/gdbhosale/laraadmin-dev.git
 cd laraadmin
 composer install
 cp .env.example .env
