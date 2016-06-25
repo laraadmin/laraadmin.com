@@ -102,7 +102,7 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                     <pre><code>["name", 'Name', 'Name', false, '', 5, 256, true],</code></pre>
                     <p>You also need to define the title / view column name in generate method <code>write_view_column_name_here</code> in lowercase only. </p><br>
                     
-                    <h3 id="schema-ui-types">UI Types</h3>
+                    <h3 id="schema-ui-types">UI / Data Types</h3>
                     
                     <table class="table table-bordered">
                         
@@ -213,7 +213,7 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                         <li><h1 style="font-size:30px;margin-left:20px;">LaraAdmin</h1></li>
 						<li class=""> <a href="#install-basics">Installation</a>
 							<ul class="nav">
-								<li class=""><a href="#install-composer">Install Composer &amp; Laravel</a></li>
+								<li class=""><a href="#install-composer-laravel">Install Composer &amp; Laravel</a></li>
 								<li class=""><a href="#install">Install LaraAdmin Package</a></li>
                                 <li class=""><a href="#enable-less">Enable Less</a></li>
 							</ul>
@@ -222,6 +222,7 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                             <ul class="nav">
 								<li class=""><a href="#generate-migration">Generate migration</a></li>
 								<li class=""><a href="#edit-migration">Edit Migration</a></li>
+                                <li class=""><a href="#schema-ui-types">UI / Data Type</a></li>
 							</ul>
                         </li>
                         
@@ -240,12 +241,31 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
 $(function () {
     $(window).scroll(function() {
         var top = $(this).scrollTop();
-        if(top > 400) {
+        var bottom = ($(document).height() - top);
+        var str = top+" - "+$(document).height()+" - " + bottom;
+        // console.log(str);
+        
+        if(bottom < 470) {
+            console.log("bottom "+str);
+            
+            $(".bs-docs-sidebar").addClass("affix-bottom");
+            $(".bs-docs-sidebar").removeClass("affix-top");
+            $(".bs-docs-sidebar").removeClass("affix");
+            $(".bs-docs-sidebar").css("top", ""+($(document).height() - 970)+"px");
+        } else if(top > 400) {
+            console.log("middle "+str);
+            
             $(".bs-docs-sidebar").addClass("affix");
             $(".bs-docs-sidebar").removeClass("affix-top");
+            $(".bs-docs-sidebar").removeClass("affix-bottom");
+            $(".bs-docs-sidebar").css("top", "");
         } else {
+            console.log("top "+str);
+            
             $(".bs-docs-sidebar").removeClass("affix");
+            $(".bs-docs-sidebar").removeClass("affix-bottom");
             $(".bs-docs-sidebar").addClass("affix-top");
+            $(".bs-docs-sidebar").css("top", "");
         }
     });
 });
