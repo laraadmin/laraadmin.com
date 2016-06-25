@@ -246,21 +246,21 @@ $(function () {
         // console.log(str);
         
         if(bottom < 470) {
-            console.log("bottom "+str);
+            // console.log("bottom "+str);
             
             $(".bs-docs-sidebar").addClass("affix-bottom");
             $(".bs-docs-sidebar").removeClass("affix-top");
             $(".bs-docs-sidebar").removeClass("affix");
             $(".bs-docs-sidebar").css("top", ""+($(document).height() - 970)+"px");
         } else if(top > 400) {
-            console.log("middle "+str);
+            // console.log("middle "+str);
             
             $(".bs-docs-sidebar").addClass("affix");
             $(".bs-docs-sidebar").removeClass("affix-top");
             $(".bs-docs-sidebar").removeClass("affix-bottom");
             $(".bs-docs-sidebar").css("top", "");
         } else {
-            console.log("top "+str);
+            // console.log("top "+str);
             
             $(".bs-docs-sidebar").removeClass("affix");
             $(".bs-docs-sidebar").removeClass("affix-bottom");
