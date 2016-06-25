@@ -19,7 +19,10 @@
         <div class="row">
 			<div class="col-md-9" role="main">
 				<div class="bs-docs-section">
-					<h1 id="" class="page-header">Installation</h1>
+                    
+                    <!-- ================ Install Composer & Laravel ================ -->
+                    
+					<h1 id="install-basics" class="page-header">Installation</h1>
 					<h3 id="install-composer-laravel">Install Composer & Laravel</h3>
 					
                     <b class="mb-5">Install Composer:</b>
@@ -33,23 +36,30 @@ export PATH="~/.composer/vendor/bin:$PATH"</code></pre>
                     <b>For MacOSX</b>
                     <pre><code>composer global require "laravel/installer"
 sudo nano /etc/paths</code></pre>
-                    <p>Add this path: <code>/Users/me/.composer/vendor/bin</code></p>
+                    <p>Add this path: <code>/Users/me/.composer/vendor/bin</code></p><br>
                     
-					<h3 id="clone-laraadmin-project">Clone LaraAdmin Project</h3>
-                    <pre><code>git clone https://github.com/gdbhosale/laraadmin-dev.git
-cd laraadmin
-composer install
-cp .env.example .env
-nano .env</code></pre>
-                    <p>Configure your environment file <code>.env</code> for database.</p>
-                    <b class="mb-5">Generate application key:</b>
-                    <pre><code>php artisan key:generate</code></pre>
+                    <!-- ================ Install LaraAdmin Package ================ -->
                     
-                    <b class="mb-5">Migrate:</b>
-                    <pre><code>php artisan migrate</code></pre>
+					<h3 id="install">Install LaraAdmin Package</h3>
+                    <p>1. Install Package using <code>composer</code> command.</p>
+                    <pre class="mb-15"><code>composer require dwij/laraadmin</code></pre>
                     
-                    <b class="mb-5">Change file permissions:</b>
-                    <pre><code>sudo chmod -R 777 bootstrap/ storage/</code></pre>
+                    <p class="mb-15">2. Configure your environment file <code>.env</code> for <b>database</b>. Also make sure about file writable permissions for <code>bootstrap/</code> & <code>storage/</code>.</p>
+                    
+                    <p class="mb-15">3. Add LaraAdmin Service provider in <code>config/app.php</code> :</p>
+                    <pre class="mb-15"><code>Dwij\Laraadmin\LAProvider::class</code></pre>
+                    
+                    <p class="mb-15">4. Take file <b>backup</b> or use <b>git</b> as installation may append or change some of your files. :</p>
+                    
+                    <p class="mb-10">5. Run installer command :</p>
+                    <pre class="mb-15"><code>php artisan la:install</code></pre>
+                    
+                    <p class="mb-15">6. Provide Super Admin Information like Name, Email & Password. Your account will be ready to login.</p>
+                    
+                    <p class="mb-15"><span class="cl-green">Your setup is completed.</span> Check your admin portal on <span class="text-danger">your-app.com/admin</span>. If any problem don't hesitate to write me on <a href="mailto:hello@laraadmin.com">hello@laraadmin.com</a> (Please provide error log).</p>
+                    
+                    <!-- ================ Enable Less to CSS ================ -->
+                    <br>
                     
                     <h3 id="enable-less">Enable Less to CSS <small>(Optional)</small></h3>
                     <p>To generate CSS files from Less</p>
@@ -57,17 +67,14 @@ nano .env</code></pre>
 npm install forever -g
 forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                     
-                    <p>Your Application is ready to serve you. Default Super Admin <span class="text-danger">login credentials</span> are as below:<br>
-                        <b>Username:</b> laraadmin@gmail.com<br>
-                        <b>Passowrd:</b> 12345678
-                    </p>
+                    <!-- ================ Make Migration ================ -->
                     
                     <h1 id="make-migration" class="page-header">Make Migration</h1>
                     
                     <h3 id="generate-migration">Generate migration file</h3>
                     <p>Take example that you want to generate CRUD for <span class="text-danger">Course</span>.</p>
                     <pre><code>php artisan la:migration Course</code></pre>
-                    <p>You can also use syntax like below:</p>
+                    <p><span class="text-danger">OR</span> you can also use syntax like below:</p>
                     <pre><code>php artisan la:migration create_course_table</code></pre><br>
                     
                     <h3 id="edit-migration">Edit Migration</h3>
@@ -124,6 +131,9 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                         
                         <tr><td class="bold" rowspan="2">Email</td><td class="tac">Integer</td><td class="tac">Integer</td><td class="tac">In String</td><td></td></tr>
                         <tr><td colspan=4 class="example"><input value='["email", "Email", "Email", false, "", 0, 0, false],' readonly onfocus="this.select();"></td></tr>
+                        
+                        <tr><td class="bold" rowspan="2">File</td><td class="tac">0</td><td class="tac">256</td><td class="tac">File Path (String)</td><td></td></tr>
+                        <tr><td colspan=4 class="example"><input value='["project_file", "Project File", "File", false, "project_file.pdf", 0, 256, false],' readonly onfocus="this.select();"></td></tr>
                         
                         <tr><td class="bold" rowspan="2">Float</td><td class="tac">Minimum Value</td><td class="tac">Maximum Value</td><td class="tac">In Float</td><td></td></tr>
                         <tr><td colspan=4 class="example"><input value='["weight", "Weight", "Float", false, 0.0, 0, 20.00, true],' readonly onfocus="this.select();"></td></tr>
@@ -190,7 +200,7 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                         <li>Append Route Resources</li>
                         <li>Add Menu</li>
                     </ul>
-                    <p>Enjoy the adventure !!! Any queries will be welcomed on <a href="mailto:ganesh@dwij.in">ganesh@dwij.in</a>. Follow me on: </p>
+                    <p>Enjoy the adventure !!! All queries will be welcomed on <a href="mailto:hello@laraadmin.com">hello@laraadmin.com</a>. Follow me on: </p>
 				</div>
 			</div>
 			
@@ -200,10 +210,10 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
 			<div class="col-md-3" role="complementary">
 				<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
 					<ul class="nav bs-docs-sidenav">
-						<li class=""> <a href="#install-composer-laravel">Installation</a>
+						<li class=""> <a href="#install-basics">Installation</a>
 							<ul class="nav">
 								<li class=""><a href="#install-composer">Install Composer &amp; Laravel</a></li>
-								<li class=""><a href="#clone-laraadmin-project">Clone Project</a></li>
+								<li class=""><a href="#install">Install LaraAdmin Package</a></li>
                                 <li class=""><a href="#enable-less">Enable Less</a></li>
 							</ul>
 						</li>

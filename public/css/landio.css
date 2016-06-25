@@ -175,6 +175,7 @@ mark,.mark{padding:.2em;background-color:#fcf8e3}
 .container::after{content:"";display:table;clear:both}
 
 .cl-gray{color:#666 !important;}
+.cl-green{color:#15CC1C !important;}
 
 .findme {
     text-align: center;
@@ -182,6 +183,10 @@ mark,.mark{padding:.2em;background-color:#fcf8e3}
     display: block;
     margin-bottom: 10px;
 }
+
+.mb-5{margin-bottom:5px !important;}
+.mb-10{margin-bottom:10px !important;}
+.mb-15{margin-bottom:15px !important;}
 
 .table{border-collapse:collapse !important;border:1px solid #ddd;width:100%;margin:20px 0px;}
 .table th{text-align:center;}
@@ -2368,8 +2373,8 @@ figure{position:relative}
     }
 }
 
-.bs-docs-container h1{margin:20px 0 20px;padding-bottom:10px;border-bottom:3px solid #DCDCDC;}
-.bs-docs-container h3{margin-top:20px;}
+.bs-docs-container h1{margin:20px 0 20px;padding-bottom:10px;border-bottom:3px solid #DCDCDC;color: #FF5722;}
+.bs-docs-container h3{margin-top:20px;color:#03A9F4;}
 .bs-docs-container pre {
     display: block;
     padding: 9.5px;

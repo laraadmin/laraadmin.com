@@ -130,7 +130,7 @@
 								<a target="_blank" href="https://twitter.com/gdbhosale" class="twitter"><i class="fa fa-twitter"></i></a>
 								<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
 								<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
-								<a target="_blank" href="http://dwijitsolution" class="company"><i class="fa fa-building"></i></a>
+								<a target="_blank" href="http://dwijitsolution.com" class="company"><i class="fa fa-building"></i></a>
 								<a target="_blank" href="http://dwij.co.in" class="blog"><i class="fa fa-comments"></i></a>
 							</div>
 							<!--<a href="#" class="btn-circle has-gradient pull-xs-right"><span class="sr-only">Edit</span><span class="icon-edit"></span></a>-->
