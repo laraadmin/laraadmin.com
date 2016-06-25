@@ -109,7 +109,7 @@ ol ol,ul ul,ol ul,ul ol{margin-bottom:0}
 dt{font-weight:bold}
 dd{margin-bottom:.5rem;margin-left:0}
 blockquote{margin:0 0 1rem}
-a{color:#424753;text-decoration:none}
+a{color:#2196F3;text-decoration:none}
 a:focus,a:hover{color:#202328;text-decoration:none}
 a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 pre{margin-top:0;margin-bottom:1rem}
@@ -173,6 +173,15 @@ mark,.mark{padding:.2em;background-color:#fcf8e3}
 .figure-caption{font-size:90%;color:#818a91}
 .container{margin-left:auto;margin-right:auto;padding-left:0.938rem;padding-right:0.938rem}
 .container::after{content:"";display:table;clear:both}
+
+.cl-gray{color:#666 !important;}
+
+.findme {
+    text-align: center;
+    margin-top: -10px;
+    display: block;
+    margin-bottom: 10px;
+}
 
 .table{border-collapse:collapse !important;border:1px solid #ddd;width:100%;margin:20px 0px;}
 .table th{text-align:center;}
@@ -2040,12 +2049,14 @@ h2 em{font-weight:500}
 .social-links a{color:#FFF;font-size: 20px;width: 30px;height: 30px;display:inline-block;text-align: center;padding-top: 4px;border-radius: 50%;margin-bottom:10px;}
 .social-links a i.fa{display:block;margin-top:2px;}
 .social-links a.github{background:#000;}
+.social-links a.personel{background:#009688;}
+.social-links a.blog{background:#FF5722;}
+.social-links a.company{background:#00a9cb;}
 .social-links a.facebook{background:#3b5998;}
 .social-links a.twitter{background:#55acee;}
 .social-links a.linkedin{background:#0077b5;}
 .social-links a.instagram{background:#00F;}
 .social-links a.google{background:#dc4e41;}
-.social-links a.blog{background:#00F;}
 
 #___plusone_0{vertical-align: -webkit-baseline-middle !important;}
 #___follow_0{vertical-align: -webkit-baseline-middle !important;}

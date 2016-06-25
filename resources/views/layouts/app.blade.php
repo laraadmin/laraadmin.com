@@ -33,6 +33,7 @@
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/landio.css') }}">
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -60,11 +61,11 @@
 			<div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
 				<ul class="nav navbar-nav pull-xs-right">
                     <li class="nav-item nav-item-toggable">
-						<a class="nav-link" href="{{ url('/documentation') }}">Documentation</a>
+						<a class="nav-link" href="{{ url('/') }}">Home</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
-						<a class="nav-link" href="https://github.com/gdbhosale/laraadmin-dev">Download</a>
+						<a class="nav-link" href="{{ url('/documentation') }}">Documentation</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
@@ -115,19 +116,22 @@
 								</div>
 								<div class="media-body media-middle">
 									<h5 class="media-heading">Ganesh Bhosale</h5>
-									<h6><a href="http://dwijitsolutions.com">Dwij IT Solutions</a></h6>
-                                    <h6><a href="mailto:ganesh@dwij.in">ganesh@dwij.in</a></h6>
-                                    <h6><a href="tel:+917350558900">+91 7350558900</a></h6>
+									<h6><a class="cl-gray" href="http://dwijitsolutions.com">Dwij IT Solutions</a></h6>
+                                    <h6><a class="cl-gray" href="mailto:ganesh@dwij.in">ganesh@dwij.in</a></h6>
+                                    <h6><a class="cl-gray" href="tel:+917350558900">+91 7350558900</a></h6>
 								</div>
 							</div>
+							<div class="findme">Find me on:</div>
 							<div class="social-links">
 								<a target="_blank" href="https://github.com/gdbhosale" class="github"><i class="fa fa-github"></i></a>
+								<a target="_blank" href="http://ganeshbhosale.com" class="personel"><i class="fa fa-globe"></i></a>
 								<a target="_blank" href="https://plus.google.com/+GaneshBhosale" class="google"><i class="fa fa-google"></i></a>
                                 <a target="_blank" href="https://www.facebook.com/gbhosale" class="facebook"><i class="fa fa-facebook"></i></a>
 								<a target="_blank" href="https://twitter.com/gdbhosale" class="twitter"><i class="fa fa-twitter"></i></a>
 								<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
 								<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
-								<a target="_blank" href="http://dwij.co.in" class="google"><i class="fa fa-comments"></i></a>
+								<a target="_blank" href="http://dwijitsolution" class="company"><i class="fa fa-building"></i></a>
+								<a target="_blank" href="http://dwij.co.in" class="blog"><i class="fa fa-comments"></i></a>
 							</div>
 							<!--<a href="#" class="btn-circle has-gradient pull-xs-right"><span class="sr-only">Edit</span><span class="icon-edit"></span></a>-->
 						</div>
@@ -160,18 +164,18 @@
 
 <section class="section-intro bg-faded" style="padding:30px 0px;">
 	<div class="social-links">
-		<a target="_blank" href="https://github.com/gdbhosale" class="github"><i class="fa fa-github"></i></a>
-		<a target="_blank" href="https://plus.google.com/+GaneshBhosale" class="google"><i class="fa fa-google"></i></a>
-		<a target="_blank" href="https://www.facebook.com/gbhosale" class="facebook"><i class="fa fa-facebook"></i></a>
-		<a target="_blank" href="https://twitter.com/gdbhosale" class="twitter"><i class="fa fa-twitter"></i></a>
+		<a target="_blank" href="https://github.com/dwijitsolutions/laraadmin" class="github"><i class="fa fa-github"></i></a>
+		<a target="_blank" href="https://plus.google.com/108907847575938465850" class="google"><i class="fa fa-google"></i></a>
+		<a target="_blank" href="https://www.facebook.com/laraadmin" class="facebook"><i class="fa fa-facebook"></i></a>
+		<a target="_blank" href="https://twitter.com/laraadmn" class="twitter"><i class="fa fa-twitter"></i></a>
 		<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		<a target="_blank" href="https://www.linkedin.com/company/dwij-it-solutions" class="linkedin"><i class="fa fa-linkedin"></i></a>
 		<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
-		<a target="_blank" href="http://dwij.co.in" class="google"><i class="fa fa-comments"></i></a>
 	</div>
 	
 	<div class="text-center">
 		<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>&nbsp;&nbsp;
-		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://laraadmin.com" data-text="LaraAdmin - Laravel based open-source CRUD Generator" data-via="DwijITSolutions">Tweet</a>&nbsp;&nbsp;
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://laraadmin.com" data-text="LaraAdmin - Laravel based open-source CRUD Generator" data-via="laraadmn">Tweet</a>&nbsp;&nbsp;
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/109008605229791628934" data-rel="publisher"></div>&nbsp;&nbsp;
 		<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="50"></div>
@@ -191,8 +195,8 @@
 				</div>
 				<div class="col-md-6 col-lg-7">
 					<ul class="nav nav-inline" style="padding:0px;">
+						<li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ url('/documentation') }}">Documentation</a></li>
-						<li class="nav-item"><a class="nav-link" href="https://github.com/gdbhosale/laraadmin-dev">Download</a></li>
 						<li class="nav-item"><a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a></li>
 						<li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
 					</ul>

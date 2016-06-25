@@ -8,11 +8,21 @@
         <div class="container">
             <h1 class="display-3">LaraAdmin</h1>
             <h2 class="m-b-3"> LaraAdmin is a <b>Open source CRM</b> for quick-start Admin based applications.</h2>
-            <a class="btn btn-secondary-outline m-b-1" href="https://github.com/gdbhosale/laraadmin" role="button"><span class="icon-rocket"></span>Download from Github</a>
+            <a class="btn btn-secondary-outline m-b-1" href="{{ url('/documentation') }}" role="button"><span class="icon-rocket"></span>See Installation</a>
             <ul class="nav nav-inline social-share">
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/gdbhosale" target="_blank"><span class="icon-twitter"></span> 431</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://facebook.com/gdbhosale" target="_blank"><span class="icon-facebook"></span> 1200</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/gdbhosale" target="_blank"><span class="icon-linkedin"></span> 1590</a></li>
+                <a class="github-button" href="https://github.com/dwijitsolutions/laraadmin" data-icon="octicon-star" data-count-href="/dwijitsolutions/laraadmin/stargazers" data-count-api="/repos/dwijitsolutions/laraadmin#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star dwijitsolutions/laraadmin on GitHub">Star</a>&nbsp;
+                
+                <a class="github-button" href="https://github.com/gdbhosale" data-count-href="/gdbhosale/followers" data-count-api="/users/gdbhosale#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @gdbhosale on GitHub">Follow @gdbhosale</a>&nbsp;
+                
+                <a class="github-button" href="https://github.com/dwijitsolutions/laraadmin" data-icon="octicon-eye" data-count-href="/dwijitsolutions/laraadmin/watchers" data-count-api="/repos/dwijitsolutions/laraadmin#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch dwijitsolutions/laraadmin on GitHub">Watch</a>&nbsp;
+                
+                <a class="github-button" href="https://github.com/dwijitsolutions/laraadmin/fork" data-icon="octicon-repo-forked" data-count-href="/dwijitsolutions/laraadmin/network" data-count-api="/repos/dwijitsolutions/laraadmin#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork dwijitsolutions/laraadmin on GitHub">Fork</a>&nbsp;
+                
+                
+                <!--<li class="nav-item"><a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank"><span class="fa fa-github"></span> 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/laraadmn" target="_blank"><span class="icon-twitter"></span> 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://facebook.com/laraadmin" target="_blank"><span class="icon-facebook"></span> 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/company/dwij-it-solutions" target="_blank"><span class="icon-linkedin"></span> 53</a></li>-->
             </ul>
         </div>
     </div>
@@ -38,6 +48,16 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-block">
+                        <span class="fa fa-rocket display-1"></span>
+                        <h4 class="card-title">Easy Installation</h4>
+                        <h6 class="card-subtitle text-muted"></h6>
+                        <p class="card-text">Single command installation for quick up and running. Check <a href="{{ url('/documentation#install') }}">installation</a> now.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-block">
                         <span class="fa fa-clone display-1"></span>
                         <h4 class="card-title">Module Manager</h4>
                         <h6 class="card-subtitle text-muted"></h6>
@@ -48,20 +68,33 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-block">
-                        <span class="fa fa-tasks display-1"></span>
-                        <h4 class="card-title">Workflows</h4>
+                        <span class="fa fa-files-o display-1"></span>
+                        <h4 class="card-title">Media Manager</h4>
                         <h6 class="card-subtitle text-muted"></h6>
-                        <p class="card-text">Workflows governs the automation of <b>business processes</b> like Tasks, Events and many others according to set of procedural rules. (<b>Cron Events</b>)</p>
+                        <p class="card-text">Manage files & images and upload them with ease.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card m-b-0">
+                    <div class="card-block">
+                        <span class="fa fa-group display-1"></span>
+                        <h4 class="card-title" title="Under Development">User Management *</h4>
+                        <h6 class="card-subtitle text-muted"></h6>
+                        <p class="card-text">Easy user Management with features like Employees, Roles, Groups, Departments and <b>Access Control</b>.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card m-b-0">
+                <div class="card">
                     <div class="card-block">
-                        <span class="fa fa-user display-1"></span>
-                        <h4 class="card-title">User Management</h4>
+                        <span class="fa fa-tasks display-1"></span>
+                        <h4 class="card-title" title="Under Development">Workflows *</h4>
                         <h6 class="card-subtitle text-muted"></h6>
-                        <p class="card-text">Easy user Management with features like Employees, Roles, Groups, Departments and <b>Access Control</b>.</p>
+                        <p class="card-text">Workflows governs the automation of <b>business processes</b> like Tasks, Events and many others according to set of procedural rules. (<b>Cron Events</b>)</p>
                     </div>
                 </div>
             </div>
