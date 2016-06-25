@@ -210,6 +210,7 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
 			<div class="col-md-3" role="complementary">
 				<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
 					<ul class="nav bs-docs-sidenav">
+                        <li><h1 style="font-size:30px;margin-left:20px;">LaraAdmin</h1></li>
 						<li class=""> <a href="#install-basics">Installation</a>
 							<ul class="nav">
 								<li class=""><a href="#install-composer">Install Composer &amp; Laravel</a></li>
@@ -233,3 +234,20 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
 </section>
 
 @endsection
+
+@push('scripts')
+<script>
+$(function () {
+    $(window).scroll(function() {
+        var top = $(this).scrollTop();
+        if(top > 400) {
+            $(".bs-docs-sidebar").addClass("affix");
+            $(".bs-docs-sidebar").removeClass("affix-top");
+        } else {
+            $(".bs-docs-sidebar").removeClass("affix");
+            $(".bs-docs-sidebar").addClass("affix-top");
+        }
+    });
+});
+</script>
+@endpush
