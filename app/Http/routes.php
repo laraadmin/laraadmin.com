@@ -23,6 +23,6 @@ Route::get('/home', function() {
 Route::get('/documentation', function() {
     return view('documentation');
 });
-Route::get('/installation', function() {
-    return view('installation');
+Route::get('/devdoc-features', function() {
+    return view('devdoc-features');
 });
