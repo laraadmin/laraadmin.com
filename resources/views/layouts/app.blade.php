@@ -69,6 +69,8 @@
 						<a class="nav-link" href="{{ url('/documentation') }}">Documentation</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
+					<li class="nav-item nav-item-toggable"><a class="nav-link" href="{{ url('/devdoc-features') }}">Features</a></li>
+					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
 						<a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a>
 					</li>
@@ -198,6 +200,7 @@
 					<ul class="nav nav-inline" style="padding:0px;">
 						<li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ url('/documentation') }}">Documentation</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ url('/devdoc-features') }}">Features</a></li>
 						<li class="nav-item"><a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a></li>
 						<li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
 					</ul>
