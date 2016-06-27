@@ -261,7 +261,7 @@
 					if (isQuery(element)) {
 						obj = {
 							href    : element.data('fancybox-href') || element.attr('href'),
-							title   : element.data('fancybox-title') || element.attr('title'),
+							title   : element.data('title') || element.attr('data-original-title'),
 							isDom   : true,
 							element : element
 						};

@@ -35,7 +35,7 @@
     <div class="container">
         <h3 class="wp wp-1">CRM that gives you full flexibility in code and work-flows.</h3>
         <p class="lead wp wp-2">Baked in <b><a href="http://laravel.com">Laravel</a></b> and customized for flowless performance.</p>
-        <img src="img/laraadmin-dashboard.jpg" alt="LaraAdmin Dashboard" class="img-fluid wp wp-3">
+        <img src="img/laraadmin/laraadmin-dashboard.jpg" alt="LaraAdmin Dashboard" class="img-fluid wp wp-3">
     </div>
 </section>
 

@@ -20,6 +20,19 @@
         <div class="row">
 			<div class="col-md-9" role="main">
 				<div class="bs-docs-section">
+                    <h1 id="feature-gallery" class="page-header">Feature Gallery</h1>
+                    
+                    <div id="gallery1">
+                        <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-dashboard.jpg') }}" title="LaraAdmin Dashboard" style="background:url('{{ url('img/laraadmin/laraadmin-dashboard.jpg') }}');background-size:cover;background-position:center;"></a>
+                        
+                        <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-row-listing.jpg') }}" title="LaraAdmin Records Listing View" style="background:url('{{ url('img/laraadmin/laraadmin-row-listing.jpg') }}');background-size:cover;background-position:center;"></a>
+                        
+                        <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-row-listing-add.jpg') }}" title="LaraAdmin Add Records Modal" style="background:url('{{ url('img/laraadmin/laraadmin-row-listing-add.jpg') }}');background-size:cover;background-position:center;"></a>
+                        
+                        <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-row-view.jpg') }}" title="LaraAdmin Show Record View" style="background:url('{{ url('img/laraadmin/laraadmin-row-view.jpg') }}');background-size:cover;background-position:center;"></a>
+                        
+                        <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-employee-view.jpg') }}" title="LaraAdmin Employee View" style="background:url('{{ url('img/laraadmin/laraadmin-employee-view.jpg') }}');background-size:cover;background-position:center;"></a>
+                    </div>
                     
 					<h1 id="install-basics" class="page-header">Feature Listing</h1>
                     <ol class="featuresl">
@@ -34,7 +47,7 @@
                                     <ul>
                                         <li>index.blade.php - Listing via Datatables + Contains Add Form in Modal</li>
                                         <li>edit.blade.php</li>
-                                        <li>show.blade.php - Customizable <a class="fblink" href="{{ url('img/laraadmin-employee-view.jpg') }}">show view</a></li>
+                                        <li>show.blade.php - Customizable <a class="fblink" href="{{ url('img/laraadmin/laraadmin-employee-view.jpg') }}">show view</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -155,6 +168,7 @@
                             </ul>
                         </li>
                     </ol>
+                    
 				</div>
 			</div>
 			
@@ -211,6 +225,15 @@ $(function () {
             $(".bs-docs-sidebar").css("top", "");
         }
     });
+    $(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none',
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+	});
 });
 </script>
 @endpush

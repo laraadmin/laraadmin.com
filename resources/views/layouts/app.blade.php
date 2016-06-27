@@ -215,9 +215,11 @@
 	<script src="js/bootstrap/collapse.js"></script>
 	<script src="js/bootstrap/dropdown.js"></script>
 	<script src="js/bootstrap/modal.js"></script>
+	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+	<script src="js/bootstrap/tooltip.js"></script>
 	<script src="js/plugins/jquery.waypoints.js"></script>
 	<script src="js/plugins/jquery.placeholder.js"></script>
-	<script src="js/plugins/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/plugins/fancybox/jquery.fancybox.js"></script>
 		
 	<script src="js/bootstrap/util.js"></script>
 	<script src="js/landio.js"></script>
