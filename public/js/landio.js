@@ -216,5 +216,13 @@
   }
 
   init();
+  
+  $('.fblink').fancybox({
+		helpers: {
+      overlay: {
+        locked: false
+      }
+    }
+	});
 
 })(jQuery);

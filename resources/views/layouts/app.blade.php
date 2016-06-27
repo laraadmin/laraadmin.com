@@ -32,6 +32,7 @@
 	<meta name="theme-color" content="#663fb5">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/landio.css') }}">
+	<link rel="stylesheet" href="{{ asset('js/plugins/fancybox/jquery.fancybox.css') }}">
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
@@ -213,6 +214,7 @@
 	<script src="js/bootstrap/modal.js"></script>
 	<script src="js/plugins/jquery.waypoints.js"></script>
 	<script src="js/plugins/jquery.placeholder.js"></script>
+	<script src="js/plugins/fancybox/jquery.fancybox.pack.js"></script>
 		
 	<script src="js/bootstrap/util.js"></script>
 	<script src="js/landio.js"></script>
