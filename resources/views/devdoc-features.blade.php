@@ -32,6 +32,8 @@
                         <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-row-view.jpg') }}" title="LaraAdmin Show Record View" style="background:url('{{ url('img/laraadmin/laraadmin-row-view.jpg') }}');background-size:cover;background-position:center;"></a>
                         
                         <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-employee-view.jpg') }}" title="LaraAdmin Employee View" style="background:url('{{ url('img/laraadmin/laraadmin-employee-view.jpg') }}');background-size:cover;background-position:center;"></a>
+                        
+                        <a class="fancybox tt" rel="gallery1" href="{{ url('img/laraadmin/laraadmin-online-code-editor.jpg') }}" title="Online Code Editor" style="background:url('{{ url('img/laraadmin/laraadmin-online-code-editor.jpg') }}');background-size:cover;background-position:center;"></a>
                     </div>
                     
 					<h1 id="install-basics" class="page-header">Feature Listing</h1>
