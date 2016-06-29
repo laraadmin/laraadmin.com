@@ -23,6 +23,9 @@ Route::get('/home', function() {
 Route::get('/documentation', function() {
     return view('documentation');
 });
+Route::get('features', function() {
+    return view('features');
+});
 Route::get('/devdoc-features', function() {
-    return view('devdoc-features');
+    return redirect('features');
 });

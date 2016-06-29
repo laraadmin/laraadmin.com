@@ -99,6 +99,16 @@
                 </div>
             </div>
         </div>
+        <br><br>
+        <a href="{{ url('/features') }}" class="btn btn-primary">Check full feature list !!!</a>
+    </div>
+</section>
+
+<section class="section-intro bg-faded text-xs-center">
+    <div class="container">
+        <h1>Snapshots</h1><br>
+        @include('fancy-gallery')
+        <br><br>
     </div>
 </section>
 
@@ -342,8 +352,24 @@
 -->
 
 
-<section class="section-signup text-center" style="padding:0px;padding-bottom:40px;">
+<section class="section-signup text-center" style="padding-top:40px;padding-bottom:40px;">
     <a href="{{ url('/documentation') }}" class="btn btn-primary">Check out documentation !!!</a>
 </section>
 
 @endsection
+
+@push('scripts')
+<script>
+$(function () {
+    $(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none',
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+	});
+});
+</script>
+@endpush

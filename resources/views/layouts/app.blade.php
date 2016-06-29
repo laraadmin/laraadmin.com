@@ -79,7 +79,7 @@
 						<a class="nav-link" href="{{ url('/documentation') }}">Documentation</a>
 					</li>
 					<li class="navbar-divider hidden-sm-down"></li>
-					<li class="nav-item nav-item-toggable"><a class="nav-link" href="{{ url('/devdoc-features') }}">Features</a></li>
+					<li class="nav-item nav-item-toggable"><a class="nav-link" href="{{ url('/features') }}">Features</a></li>
 					<li class="navbar-divider hidden-sm-down"></li>
 					<li class="nav-item nav-item-toggable">
 						<a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a>
@@ -181,16 +181,17 @@
 		<a target="_blank" href="https://plus.google.com/108907847575938465850" class="google"><i class="fa fa-google"></i></a>
 		<a target="_blank" href="https://www.facebook.com/laraadmin" class="facebook"><i class="fa fa-facebook"></i></a>
 		<a target="_blank" href="https://twitter.com/laraadmn" class="twitter"><i class="fa fa-twitter"></i></a>
-		<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		
+		<!--<a target="_blank" href="https://www.linkedin.com/in/gdbhosale" class="linkedin"><i class="fa fa-linkedin"></i></a>
 		<a target="_blank" href="https://www.linkedin.com/company/dwij-it-solutions" class="linkedin"><i class="fa fa-linkedin"></i></a>
-		<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>
+		<a target="_blank" href="http://instagram.com/gdbhosale" class="instagram"><i class="fa fa-instagram"></i></a>-->
 	</div>
 	
 	<div class="text-center">
 		<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>&nbsp;&nbsp;
 		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://laraadmin.com" data-text="LaraAdmin - Laravel based open-source CRUD Generator" data-via="laraadmn">Tweet</a>&nbsp;&nbsp;
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/109008605229791628934" data-rel="publisher"></div>&nbsp;&nbsp;
+		<!--<div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/109008605229791628934" data-rel="publisher"></div>&nbsp;&nbsp;-->
 		<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="50"></div>
 	</div>
 </section>
@@ -210,7 +211,7 @@
 					<ul class="nav nav-inline" style="padding:0px;">
 						<li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="{{ url('/documentation') }}">Documentation</a></li>
-						<li class="nav-item"><a class="nav-link" href="{{ url('/devdoc-features') }}">Features</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ url('/features') }}">Features</a></li>
 						<li class="nav-item"><a class="nav-link" href="https://github.com/dwijitsolutions/laraadmin" target="_blank">GitHub</a></li>
 						<li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
 					</ul>
