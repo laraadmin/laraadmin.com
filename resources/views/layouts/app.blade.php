@@ -9,7 +9,7 @@
 	<meta name="description" content="LaraAdmin is a Open source CRM for quick-start Admin based applications with features like Advanced CRUD Generation, Schema Manager and Workflows." />
 	<meta name="keywords" content="open source crm, laravel admin, crud generation, laravel crm" />
 	<meta name="author" content="Ganesh Bhosale, Dwij IT Solutions" />
-	<!--
+	
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -25,11 +25,8 @@
 	<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="img/favicon/manifest.json">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico">
-	<meta name="msapplication-TileColor" content="#663fb5">
-	<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-	<meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-	-->
-	<meta name="theme-color" content="#663fb5">
+	<meta name="msapplication-TileColor" content="#00a9cb">
+	<meta name="theme-color" content="#00a9cb">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/landio.css') }}">
 	<link rel="stylesheet" href="{{ asset('js/plugins/fancybox/jquery.fancybox.css') }}">
