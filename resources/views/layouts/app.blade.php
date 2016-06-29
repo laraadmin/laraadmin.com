@@ -59,8 +59,7 @@
 	<nav class="navbar @yield("nav") ">
 		<div class="container">
 			<a class="navbar-brand" href="{{ url('/') }}">
-				<span class="logo"><i class="fa fa-rocket"></i> LaraAdmin</span>
-				<span class="sr-only">LaraAdmin</span>
+				<span class="logo"><img src="@yield("logo")" alt="LaraAdmin Logo"> LaraAdmin</span>
 			</a>
 			<a class="navbar-toggler hidden-md-up pull-xs-right" data-toggle="collapse" href="#collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">&#9776;</a>
 			<a class="navbar-toggler navbar-toggler-custom hidden-md-up pull-xs-right" data-toggle="collapse" href="#collapsingMobileUser" aria-expanded="false" aria-controls="collapsingMobileUser">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section("nav", "nav-simple")
+@section("logo", asset('img/laraadmin-256.png'))
 
 @section('content')
 <header class="bg-inverse text-xs-center" role="banner" style="background: #663fb5 url(img/bg-header-5.jpg) no-repeat center bottom;background-size:cover;">

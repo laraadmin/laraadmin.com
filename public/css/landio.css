@@ -108,7 +108,7 @@ ol ol,ul ul,ol ul,ul ol{margin-bottom:0}
 dt{font-weight:bold}
 dd{margin-bottom:.5rem;margin-left:0}
 blockquote{margin:0 0 1rem}
-a{color:#2196F3;text-decoration:none}
+a{color:#00AAC8;text-decoration:none}
 a:focus,a:hover{color:#202328;text-decoration:none}
 a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 pre{margin-top:0;margin-bottom:1rem}
@@ -722,9 +722,14 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 @media (min-width:544px){
 	.navbar-sticky-top{border-radius:0}
 }
-.navbar-brand{float:left;padding-top:.25rem;padding-bottom:.25rem;margin-right:1rem;font-size:1.25rem;margin-top:11px;}
-.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}
-.navbar-brand>img{display:block}
+.navbar-brand{float:left;padding-top:.25rem;padding-bottom:.25rem;margin-right:1rem;font-size:1.25rem;margin-top:11px;color:#00a9cb;}
+.navbar-brand:focus,.navbar-brand:hover{text-decoration:none;color:#049EBD;}
+.navbar-brand img{
+    display: inline-block;
+    width: 30px;
+    vertical-align: -9px;
+    margin-right: 4px;
+}
 .navbar-divider{float:left;width:1px;padding-top:.425rem;padding-bottom:.425rem;margin-right:0;margin-left:0;overflow:hidden}
 .navbar-divider::before{content:"\00a0"}
 .navbar-toggler{padding:.5rem .75rem;font-size:1.25rem;line-height:1;background:none;border:1px solid transparent;border-radius:2rem}
