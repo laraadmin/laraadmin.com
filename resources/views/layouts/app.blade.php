@@ -227,7 +227,7 @@
 	<script src="js/plugins/jquery.waypoints.js"></script>
 	<script src="js/plugins/jquery.placeholder.js"></script>
 	<script src="js/plugins/fancybox/jquery.fancybox.js"></script>
-		
+	
 	<script src="js/bootstrap/util.js"></script>
 	<script src="js/landio.js"></script>
 @stack('scripts')

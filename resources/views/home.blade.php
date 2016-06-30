@@ -123,6 +123,18 @@
 </section>
 -->
 
+<section class="section-video bg-inverse text-xs-center wp wp-4">
+    <h3 class="sr-only">Video</h3>
+    <a href="https://www.youtube.com/watch?v=emo9qmS_Q3s" target="_blank" class="playlink">
+        <img src="img/video-poster.jpg" style="width:100%;height:500px;">
+        <div>
+            <i class="fa fa-play"></i>
+        </div>
+    </a>
+    <!--<object data="http://www.youtube.com/embed/emo9qmS_Q3s" width="100%" height="500"></object>-->
+    <!--<iframe id="videoIframe" width="100%" height="500" src="http://www.youtube.com/embed/emo9qmS_Q3s"></iframe>-->
+</section>
+
 <!--
 <section class="section-pricing bg-faded text-xs-center">
     <div class="container">

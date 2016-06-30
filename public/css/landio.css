@@ -962,6 +962,42 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .carousel-caption{right:20%;left:20%;padding-bottom:30px}
 .carousel-indicators{bottom:20px}
 }
+
+.section-video .playlink {
+    display: block;
+    position: relative;
+}
+.section-video .playlink img {
+    display: block;
+    position: relative;
+}
+.section-video .playlink div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 0.6);
+}
+.section-video .playlink div .fa {
+    margin-top: 15%;
+    font-size: 80px;
+    padding: 40px;
+    width: 120px;
+    height: 120px;
+    border: solid 2px #FFF;
+    border-radius: 50%;
+    padding-top: 20px;
+    padding-left: 34px;
+}
+@media (max-width:900px){
+    .section-video .playlink div .fa {margin-top: 25%;}
+}
+@media (max-width:600px){
+    .section-video .playlink div .fa {margin-top: 35%;}
+}
+
 .clearfix::after{content:"";display:table;clear:both}
 .center-block{display:block;margin-left:auto;margin-right:auto}
 .pull-xs-left{float:left !important}
