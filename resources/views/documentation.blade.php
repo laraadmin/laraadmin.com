@@ -201,7 +201,9 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                         <li>Append Route Resources</li>
                         <li>Add Menu</li>
                     </ul>
-                    <p>Enjoy the adventure !!! All queries will be welcomed on <a href="mailto:hello@laraadmin.com">hello@laraadmin.com</a>. Follow me on: </p>
+                    <p>Enjoy the adventure !!! All queries will be welcomed on <a href="mailto:hello@laraadmin.com">hello@laraadmin.com</a>.</p>
+                    
+                    @include('follow-req')
 				</div>
 			</div>
 			

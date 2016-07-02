@@ -158,7 +158,7 @@
                             </ul>
                         </li>
                     </ol>
-                    
+                    @include('follow-req')
 				</div>
 			</div>
 			

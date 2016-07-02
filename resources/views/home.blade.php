@@ -366,7 +366,8 @@
 
 
 <section class="section-signup text-center" style="padding-top:40px;padding-bottom:40px;">
-    <a href="{{ url('/documentation') }}" class="btn btn-primary">Check out documentation !!!</a>
+    <a href="{{ url('/documentation') }}" class="btn btn-primary">Check out documentation !!!</a><br><br>
+    @include('follow-req')
 </section>
 
 @endsection
