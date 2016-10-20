@@ -54,6 +54,8 @@ sudo nano /etc/paths</code></pre>
                     
                     <p class="mb-10">5. Run installer command :</p>
                     <pre class="mb-15"><code>php artisan la:install</code></pre>
+					<p class="mb-10">To populate default data you need to run :</p>
+					<pre class="mb-15"><code>php artisan db:seed</code></pre>
                     
                     <p class="mb-15">6. Provide Super Admin Information like Name, Email & Password. Your account will be ready to login.</p>
                     
@@ -80,18 +82,18 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                     
                     <h3 id="edit-migration">Edit Migration</h3>
                     <p>Command <code>la:migration</code> generate the migration file which contains one method call <code>Module::generate</code>:</p>
-                    <pre><code>Module::generate("Courses", 'courses', '<span class="text-success">write_view_column_name_here e.g. name</span>', [
+                    <pre><code>Module::generate("Courses", 'courses', '<span class="text-success">write_view_column_name_here e.g. name</span>', 'fa-cube', [
     <span class="text-success">// Write your columns here</span>
 ]);</code></pre>
                     <p>You need to configure your schema within given array from examples given below:</p>
                     <b class="mb-5">Row format:</b>
-                    <pre><code>["col_name_db", "Label", "UI_Type", "Readonly", "Default_Value", "min_length", "max_length", "Required", "values"]</code></pre>
+                    <pre><code>["col_name_db", "Label", "UI_Type", "Unique", "Default_Value", "min_length", "max_length", "Required", "values"]</code></pre>
                     <table class="table table-bordered">
                         <tr><th>Field</th><th>Description</th></tr>
                         <tr><td>col_name_db</td><td>Database column name</td></tr>
                         <tr><td>Label</td><td>Label of Column e.g. Name / Total Audience</td></tr>
                         <tr><td>UI_Type</td><td>It defines type of Column in more General way. Please see table for <a href="#ui-types">UI Types</a>.</td></tr>
-                        <tr><td>Readonly</td><td>Whether the data is readonly. Value in <code>TRUE / FALSE</code> or <code>1 / 0</code></td></tr>
+                        <tr><td>Unique</td><td>Whether the column has unique values. Value in <code>TRUE / FALSE</code> or <code>1 / 0</code></td></tr>
                         <tr><td>Default_Value</td><td>Default value for column.</td></tr>
                         <tr><td>min_length</td><td>Minimum Length of value in integer.</td></tr>
                         <tr><td>max_length</td><td>Maximum Length of value in integer.</td></tr>
@@ -181,7 +183,7 @@ forever start node_modules/gulp/bin/gulp.js watch</pre><br>
                     </table>
                     
                     <p>Once you are done with creating Schema your generate call will look like this:</p>
-                    <pre><code>Module::generate("Courses", 'courses', '<span class="text-success">name</span>', [
+                    <pre><code>Module::generate("Courses", 'courses', '<span class="text-success">name</span>', 'fa-cube', [
     ["name", 'Name', 'Name', false, '', 5, 256, true],
     ["teacher", 'Teacher', 'String', false, '', 0, 256, true],
     ["fees", 'Fees', 'Currency', false, 0.0, 0, 2, true],
